@@ -1,0 +1,10 @@
+/*
+  index.css already defines the design tokens, layout, and shared
+  .task / .btn / .badge components used on this page — this file only
+  holds rules specific to the Completed view.
+*/
+
+.task__text--done {
+    color: var(--sec);
+    text-decoration: line-through;
+}

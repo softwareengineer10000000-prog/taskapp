@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow — Tasks</title>
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2dbf9e">
+    <link rel="icon" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="TaskFlow">
+</head>
+<body>
+    <div class="preloader" role="status" aria-live="polite">
+        <div class="spinner" aria-hidden="true"></div>
+        <p class="text-loader">Loading</p>
+    </div>
+
+    <header class="topbar">
+        <nav class="topbar__group">
+            <button type="button" class="btn btn--ghost" id="createTaskBtn">+ New task</button>
+            <button type="button" class="btn btn--ghost" id="editTasksBtn">Edit tasks</button>
+        </nav>
+        <a href="completed.html" class="btn btn--ghost">Completed</a>
+    </header>
+
+    <main class="page">
+        <section class="panel">
+            <h1 class="panel__title">Tasks</h1>
+
+            <form class="addTask" id="addTaskForm" hidden>
+                <label for="taskInput" class="sr-only">Task description</label>
+                <textarea id="taskInput" placeholder="What do you need to do?" rows="2"></textarea>
+                <button type="submit" class="btn btn--accent">Add task</button>
+            </form>
+
+            <p class="empty-state" id="emptyState">No tasks yet — add your first one above.</p>
+
+            <ul class="taskList" id="taskList" aria-live="polite"></ul>
+        </section>
+    </main>
+
+    <script src="utils.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

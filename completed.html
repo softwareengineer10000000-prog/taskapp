@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow — Completed</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="completed.css">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2dbf9e">
+    <link rel="icon" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="TaskFlow">
+</head>
+<body>
+    <div class="preloader" role="status" aria-live="polite">
+        <div class="spinner" aria-hidden="true"></div>
+        <p class="text-loader">Loading</p>
+    </div>
+    
+    <header class="topbar">
+        <a href="index.html" class="btn btn--ghost">← Back to tasks</a>
+        <button type="button" class="btn btn--danger" id="deleteAllBtn">Delete all</button>
+    </header>
+
+    <main class="page">
+        <section class="panel">
+            <h1 class="panel__title">Completed</h1>
+            <p class="empty-state" id="emptyState">No completed tasks yet.</p>
+            <ul class="taskList" id="taskList" aria-live="polite"></ul>
+        </section>
+    </main>
+
+    <script src="utils.js"></script>
+    <script src="completed.js"></script>
+</body>
+</html>
